@@ -24,7 +24,7 @@ jobs:
         run: |
           git clone -b equuleus --single-branch https://github.com/vyos/vyos-build.git
           cd vyos-build
-          docker build -t vyos/vyos-build:equuleus docker
+          docker build --no-cache -t vyos/vyos-build:equuleus docker
 
       - name: Build VyOS ISO
         run: |
